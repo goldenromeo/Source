@@ -7,7 +7,7 @@
         <title>Source</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
         <link rel="stylesheet" href="main.css">
-        <script src="process.js"></script>
+
     </head>
     <body>
 
@@ -21,17 +21,19 @@
         get the adress to be examined
         -->
 
-        <div id="content">
 
-        <form>
 
-            <input type="text" name="site" id="site">
-            <br> <br>
+        <form action="createNewPage.php" >
 
-             <input type="button" onclick="getData(document.getElementById('site').value,'right')" value="Submit form">
+            <fieldset>
+                <input type="text" name="site" id="site">
+                <br> <br>
 
+                <input type="submit" value="Give me the source">
+
+            </fieldset>
         </form>
-        </div>
+
 
         </center>
 
