@@ -1,6 +1,26 @@
 <?php
 
-echo "hello";
+
+
+
+$site = $GET("site")
+
+checkIfValidURL($site);
+
+
+
+function checkIfValidURL($siteName){
+
+
+
+    if (filter_var($url, FILTER_VALIDATE_URL) === FALSE) {
+    echo "is url";
+}else{
+        echo "not a url";
+        //header("location:javascript://history.go(-1)");
+
+    }
+}
 
 
 function createNewPage($siteName){
