@@ -1,9 +1,9 @@
 <?php
 
 
+echo "yey";
 
-
-$site = $GET("site")
+$site = $_GET("site")
 
 checkIfValidURL($site);
 
@@ -68,4 +68,4 @@ header("location:$filename");
 }
 
 
-?<
+
