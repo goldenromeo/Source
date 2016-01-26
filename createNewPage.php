@@ -3,9 +3,9 @@
 
 echo "yey";
 
-$site = $_GET("site")
+//$site = $_GET("site")
 
-checkIfValidURL($site);
+//checkIfValidURL($site);
 
 
 
