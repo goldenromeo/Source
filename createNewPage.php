@@ -15,7 +15,7 @@ function checkIfValidURL($siteName){
     $regex .= "(\?[a-z+&\$_.-][a-z0-9;:@&%=+\/\$_.-]*)?"; // GET Query 
     $regex .= "(#[a-z_.-][a-z0-9+\$_.-]*)?"; // Anchor 
     
-     if(preg_match("/^$regex$/", $url)) 
+     if(preg_match("/^$regex$/", $siteName)) 
        { 
                echo "is url"; 
        } else {
