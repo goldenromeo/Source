@@ -1,5 +1,5 @@
-<?php  Print "Hello, World!"; ?>
- <?php  Echo "Hello, World!"; ?>
+<?php
 
 
-//this is a comment
+echo "yey";
+
