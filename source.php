@@ -1,8 +1,43 @@
 <?php
 
-$site = $_GET["site"];
+/**
+* To Do: 
+* -set variable for Document name and/or create a directory 
+* -there's a problem where page.ext?1 != page.ext
+*
+*
+*
+*
+**/
 
+
+
+//variable names
+$site = $_GET["site"];  //name of the website
+$createNewDir = true;            //wheter to create $site.html or ./$site/index.html
+$documentName = "index.html";        // name of the document to be created; default index.html but changed on preprocessor if $createNewDir set so false
+
+
+//preprocessor
+
+if(!$createNewdir){
+    
+    $documentName = $site;
+    
+}
+
+//main calls 
 checkIfValidURL($site);
+
+
+
+
+/*
+
+            /              ***********************      Functions          ***************************            /
+
+*/
+
 
 //check if string entered is a valid url 
 function checkIfValidURL($siteName){
