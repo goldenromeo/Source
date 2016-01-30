@@ -10,14 +10,14 @@
 *
 *
 */
-echo "test";
+
 //variable names
 $site = $_GET["site"];  //name of the website
 $createNewDir = true;            //wheter to create $site.html or ./$site/index.html
 $documentName = "index.html";        // name of the document to be created; default index.html but changed on preprocessor if $createNewDir set so false
 
-?>
 
+echo "
 <html>
 
     <head>
@@ -34,6 +34,7 @@ $documentName = "index.html";        // name of the document to be created; defa
     
     </body>
 
+";
 
 
 
@@ -41,7 +42,6 @@ $documentName = "index.html";        // name of the document to be created; defa
 
 
 
-<?php
 
 
 
