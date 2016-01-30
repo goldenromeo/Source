@@ -99,7 +99,9 @@ function checkIfValidURL($siteName){
      if(preg_match("/^$regex$/", $siteName)) 
        { 
                 echo "is url\n";
+                echo "<code>";
                 echo showURL($siteName);
+                echo "</code";
          
        } else {
          echo " is not an url";
@@ -115,9 +117,8 @@ function checkIfValidURL($siteName){
  function showURL($siteName){
     
         $pageLoaded = file_get_contents($siteName);
-        echo "<code>"
+        
         return htmlspecialchars($pageLoaded);
-        echo "</code>"
     }
 
 
