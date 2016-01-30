@@ -128,7 +128,7 @@ function validateRequest($siteName){
          
      }//from http://stackoverflow.com/questions/2762061/how-to-add-http-if-its-not-exists-in-the-url
      
-     echo '<br> site name: ' . $siteName . "<br";
+     echo '<br>  <br';
      
     
      
