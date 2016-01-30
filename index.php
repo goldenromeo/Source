@@ -26,7 +26,7 @@ echo '<html>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Source</title>
-        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <meta name="description" content="Source gives you the public source code of a given webpage">
         <link rel="stylesheet" href="main.css">
 
     </head>
@@ -98,13 +98,31 @@ function checkIfValidURL($siteName){
     
      if(preg_match("/^$regex$/", $siteName)) 
        { 
-               echo "is url"; 
+                echo "is url\n";
+                echo showURL($siteName);
+         
        } else {
          echo " is not an url";
      }
     
-    
+    function showURL($siteName){
+        $pageLoaded = file_get_contents($siteName);
+        
+        return $pageLoaded;
+    }
     
     
     
 }//end check if valid url function. from http://www.php.net/manual/en/function.preg-match.php#93824
+
+
+
+
+
+
+
+
+
+
+
+
