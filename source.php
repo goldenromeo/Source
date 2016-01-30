@@ -20,7 +20,47 @@ $site = $_GET["site"];  //name of the website
 $createNewDir = true;            //wheter to create $site.html or ./$site/index.html
 $documentName = "index.html";        // name of the document to be created; default index.html but changed on preprocessor if $createNewDir set so false
 
+echo '<html>
 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Source</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+
+    </head>
+    <body>
+
+    <center>
+
+        <h1>Welcome to source</h1>
+        <h2>enter your site address below!</h2>
+
+
+        <!--
+        get the adress to be examined
+        -->
+
+
+
+        <form action="source.php" method="get">
+
+            <fieldset>
+                <input type="text" name="site" id="site">
+                <br> <br>
+
+                <input type="submit" value="Source">
+
+            </fieldset>
+        </form>
+
+
+        </center>
+
+    </body>
+</html>
+';
 //preprocessor
 
 if(!$createNewdir){
