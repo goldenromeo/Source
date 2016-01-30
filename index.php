@@ -113,6 +113,7 @@ function checkIfValidURL($siteName){
 
 
  function showURL($siteName){
+     header('Content-type: text/plain');
         $pageLoaded = file_get_contents($siteName);
         
         return $pageLoaded;
