@@ -105,7 +105,7 @@ function validateRequest($siteName){
                 echo "</code";
          
        } else {
-         echo "<center> <p> <br> Sorry that is not a URl</p></center>";
+         echo "<center> <p> <br> Sorry that is not a URL</p></center>";
      }
     
     
@@ -117,11 +117,32 @@ function validateRequest($siteName){
 //getURL is in charge of getting the url contents and/or returning an error in case the address entered
 //matches the regex but is not a real web address.
  function getURL($siteName){
-    
+     
+     
+     
+     //check if it contains http or https. add http:// if it doesnt contain
+     
+     if(!preg_match("~^(?:f|ht)tps?://~i",$siteName))
+     {
+         $siteName = "http://" . $siteName
+         
+     }//from http://stackoverflow.com/questions/2762061/how-to-add-http-if-its-not-exists-in-the-url
+     
+     echo '<br> site name: ' . $siteName . "<br";
+     
+     
+    //get page soure code
         $pageLoaded = file_get_contents($siteName);
+     
+     //check if page actually exists
         if (!empty($pageLoaded)){
+            //if exist return source code
+            //nl2br ensures line breaks apppear
+            //htmlspecialchars ensure html is not interpreted
         return nl2br(htmlspecialchars($pageLoaded)) ;
         }else{
+            
+            //if page does not exist or any problems return error
             return "sorry the web address you entered does not exist or is currently unavailable";
         }
     }
