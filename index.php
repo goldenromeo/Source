@@ -105,15 +105,24 @@ function checkIfValidURL($siteName){
          echo " is not an url";
      }
     
-    function showURL($siteName){
+    
+    
+}//end check if valid url function. from http://www.php.net/manual/en/function.preg-match.php#93824
+
+
+
+
+ function showURL($siteName){
         $pageLoaded = file_get_contents($siteName);
         
         return $pageLoaded;
     }
-    
-    
-    
-}//end check if valid url function. from http://www.php.net/manual/en/function.preg-match.php#93824
+
+
+
+
+
+
 
 
 
