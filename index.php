@@ -118,7 +118,7 @@ function checkIfValidURL($siteName){
     
         $pageLoaded = file_get_contents($siteName);
         
-        return htmlspecialchars($pageLoaded);
+        return nl2br(htmlspecialchars($pageLoaded));
     }
 
 
