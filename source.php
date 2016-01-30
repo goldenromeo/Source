@@ -10,7 +10,7 @@
 *
 *
 */
-
+echo "test";
 //variable names
 $site = $_GET["site"];  //name of the website
 $createNewDir = true;            //wheter to create $site.html or ./$site/index.html
