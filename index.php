@@ -130,15 +130,7 @@ function validateRequest($siteName){
      
      echo '<br> site name: ' . $siteName . "<br";
      
-      //check if page actually exists
-     $headers = get_headers($siteName); 
-     
-    print_r(get_headers($siteName));
-     
-     if(!strpos($headers[0],"200")){
-         //if page does not exist or any problems return error
-            return "sorry the web address you entered does not exist or is currently unavailable";
-     }
+    
      
      
     //get page soure code
