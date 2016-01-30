@@ -115,8 +115,9 @@ function checkIfValidURL($siteName){
  function showURL($siteName){
     
         $pageLoaded = file_get_contents($siteName);
-        
+        echo "<code>"
         return htmlspecialchars($pageLoaded);
+        echo "</code>"
     }
 
 
