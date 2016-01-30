@@ -133,7 +133,7 @@ function validateRequest($siteName){
       //check if page actually exists
      $headers = get_headers($siteName); 
      
-    //print_r(get_headers($siteName));
+    print_r(get_headers($siteName));
      
      if(strpos($headers[0],'200')){
          //if page does not exist or any problems return error
