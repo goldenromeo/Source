@@ -28,7 +28,7 @@ echo '<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Source ' . $siteName  . '</title>
+        <title>Source ' . $site  . '</title>
         <meta name="description" content="Source gives you the public source code of a given webpage">
         <link rel="stylesheet" href="main.css">
 
