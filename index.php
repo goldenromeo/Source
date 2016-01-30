@@ -135,7 +135,7 @@ function validateRequest($siteName){
      
     print_r(get_headers($siteName));
      
-     if(strpos($headers[0],"200")){
+     if(strpos($headers[1],"200")){
          //if page does not exist or any problems return error
             return "sorry the web address you entered does not exist or is currently unavailable";
      }
