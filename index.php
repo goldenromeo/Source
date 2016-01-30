@@ -1,14 +1,8 @@
 <!--
-
-* To Do: 
-*
-*Change this page so that instead of creating a new page 
-*
-*source code is displayed below 
-*
-*
-*
-*
+*Rommel Trejo  
+*Source 
+*Source gives you the public source code of a given webpage
+*github @goldenromeo
 
 -->
 
@@ -17,9 +11,18 @@
 
 //variable names
 $site = $_GET["site"];  //name of the website
-$createNewDir = true;            //wheter to create $site.html or ./$site/index.html
-$documentName = "index.html";        // name of the document to be created; default index.html but changed on preprocessor if $createNewDir set so false
+         
+//preprocessor
+    //preprocessor was supposed to be the part where the decision to use $site.html or $site/index.html was executed 
+    //through the use of a boolean flag.- This was later dropped and the decision to use a single page was adopted.
+    //In the future I would like to expand Source and add this feature but for the moment that feature is out.
+    //1/30/16
 
+
+
+//main calls 
+
+//echo the webpage
 echo '<html>
 
     <head>
@@ -54,39 +57,37 @@ echo '<html>
 
             </fieldset>
         </form>
-
-
+        
+         <!-- end of 
+        get the adress to be examined form
+        -->
+        
         </center>
 
     </body>
 </html>
 ';
-//preprocessor
 
-if(!$createNewdir){
+validateRequest($site);
+
+
+
+
+
+
+        //              ***********************      Functions          ***************************            //
+
+
+
+
+//checks if string entered is a valid url: if it has a valid format calls getURL else outputs and error
+function validateRequest($siteName){
     
-    $documentName = $site;
-    
-}
-
-//main calls 
-checkIfValidURL($site);
-
-
-
-
-/*
-
-            /              ***********************      Functions          ***************************            /
-
-*/
-
-
-//check if string entered is a valid url 
-function checkIfValidURL($siteName){
-    
+    //checkif its empty
     if(empty($siteName))
     {return 1;}
+    
+    //if its not empty check regex
    
      $regex = "((https?|ftp)\:\/\/)?"; // SCHEME 
     $regex .= "([a-z0-9+!*(),;?&=\$_.-]+(\:[a-z0-9+!*(),;?&=\$_.-]+)?@)?"; // User and Pass 
@@ -98,13 +99,13 @@ function checkIfValidURL($siteName){
     
      if(preg_match("/^$regex$/", $siteName)) 
        { 
-                echo "is url\n";
+                
                 echo "<code>";
-                echo showURL($siteName);
+                echo getURL($siteName);
                 echo "</code";
          
        } else {
-         echo " is not an url";
+         echo "<center> <p> <br> Sorry that is not a URl</p></center>";
      }
     
     
@@ -113,12 +114,16 @@ function checkIfValidURL($siteName){
 
 
 
-
- function showURL($siteName){
+//getURL is in charge of getting the url contents and/or returning an error in case the address entered
+//matches the regex but is not a real web address.
+ function getURL($siteName){
     
         $pageLoaded = file_get_contents($siteName);
-        
-        return nl2br(htmlspecialchars($pageLoaded));
+        if (!empty($pageLoaded)){
+        return nl2br(htmlspecialchars($pageLoaded)) ;
+        }else{
+            return "sorry the web address you entered does not exist or is currently unavailable";
+        }
     }
 
 
