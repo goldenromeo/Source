@@ -84,6 +84,9 @@ checkIfValidURL($site);
 
 //check if string entered is a valid url 
 function checkIfValidURL($siteName){
+    
+    if(empty($siteName))
+    {return 1;}
    
      $regex = "((https?|ftp)\:\/\/)?"; // SCHEME 
     $regex .= "([a-z0-9+!*(),;?&=\$_.-]+(\:[a-z0-9+!*(),;?&=\$_.-]+)?@)?"; // User and Pass 
