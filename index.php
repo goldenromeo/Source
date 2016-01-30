@@ -44,7 +44,7 @@ echo '<html>
 
 
 
-        <form action="source.php" method="get">
+        <form action="index.php" method="get">
 
             <fieldset>
                 <input type="text" name="site" id="site">
