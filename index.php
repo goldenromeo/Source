@@ -124,7 +124,7 @@ function validateRequest($siteName){
      
      if(!preg_match("~^(?:f|ht)tps?://~i",$siteName))
      {
-         $siteName = "http://" . $siteName
+         $siteName = "http://" . $siteName;
          
      }//from http://stackoverflow.com/questions/2762061/how-to-add-http-if-its-not-exists-in-the-url
      
