@@ -130,21 +130,25 @@ function validateRequest($siteName){
      
      echo '<br> site name: ' . $siteName . "<br";
      
+      //check if page actually exists
+     $headers = get_headers($siteName); 
+     if(substr($headers[0], 9, 3) != "200"){
+         //if page does not exist or any problems return error
+            return "sorry the web address you entered does not exist or is currently unavailable";
+     }
+     
      
     //get page soure code
         $pageLoaded = file_get_contents($siteName);
      
-     //check if page actually exists
-        if (!empty($pageLoaded)){
+        
             //if exist return source code
             //nl2br ensures line breaks apppear
             //htmlspecialchars ensure html is not interpreted
         return nl2br(htmlspecialchars($pageLoaded)) ;
-        }else{
-            
-            //if page does not exist or any problems return error
-            return "sorry the web address you entered does not exist or is currently unavailable";
-        }
+        
+     
+     
     }
 
 
