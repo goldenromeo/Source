@@ -1,5 +1,5 @@
-<?php
-/*
+<!--
+
 * To Do: 
 *
 *Change this page so that instead of creating a new page 
@@ -9,41 +9,16 @@
 *
 *
 *
-*/
 
-echo "hello";
+-->
+
+
+<?php
+
 //variable names
 $site = $_GET["site"];  //name of the website
 $createNewDir = true;            //wheter to create $site.html or ./$site/index.html
 $documentName = "index.html";        // name of the document to be created; default index.html but changed on preprocessor if $createNewDir set so false
-
-
-echo "
-<html>
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Source</title>
-        <meta name="description" content="An interactive getting started guide for Brackets.">
-        <link rel="stylesheet" href="main.css">
-    </head>
-
-    <body>
-    
-    
-    
-    </body>
-
-";
-
-
-
-
-
-
-
-
 
 
 //preprocessor
@@ -90,4 +65,3 @@ function checkIfValidURL($siteName){
     
     
 }//end check if valid url function. from http://www.php.net/manual/en/function.preg-match.php#93824
-</html>
