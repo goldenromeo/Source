@@ -40,7 +40,8 @@ echo '<html>
         <h1>Welcome to source</h1>
         <h2>enter your site address below!</h2>
 
-<iframe src="http://ghbtns.com/github-btn.html?user=goldenromeo&repo=Source&type=fork&size=large" height="30" width="100" frameborder="0" scrolling="0" style="width:100px; height: 30px;" allowTransparency="false"></iframe>
+<table><tr><td><iframe src="http://ghbtns.com/github-btn.html?user=goldenromeo&repo=Source&type=watch&count=true&size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:170px; height: 30px;" allowTransparency="false"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=goldenromeo&repo=Source&type=fork&count=true&size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:170px; height: 30px;" allowTransparency="false"></iframe></td><td><iframe src="http://ghbtns.com/github-btn.html?user=goldenromeo&type=follow&count=true&size=large" height="30" width="240" frameborder="0" scrolling="0" style="width:240px; height: 30px;" allowTransparency="false"></iframe></td></tr></table>
+
         <!--
         get the adress to be examined
         -->
