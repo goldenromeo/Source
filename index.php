@@ -11,7 +11,7 @@
 
 //variable names
 $site = $_GET["site"];  //name of the website
-$documentName = __FILE__;
+$documentName = basename(__FILE__);
          
 //preprocessor
     //preprocessor was supposed to be the part where the decision to use $site.html or $site/index.html was executed 
