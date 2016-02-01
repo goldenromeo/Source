@@ -11,6 +11,7 @@
 
 //variable names
 $site = $_GET["site"];  //name of the website
+$documentName = __FILE__;
          
 //preprocessor
     //preprocessor was supposed to be the part where the decision to use $site.html or $site/index.html was executed 
@@ -48,7 +49,7 @@ echo '<html>
 
 
 
-        <form action="index.php" method="get">
+        <form action="' . $documentName .'" method="get">
 
             <fieldset>
                 <input type="text" name="site" id="site">
